@@ -99,8 +99,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     <p class="tag">OSONJ BE · PAKOLD KI · TŰNJ EL</p>
     <p class="lead">Kooperatív betörős játék 1–4 főnek. Lopd ki a házat, mielőtt a tulaj felébred. Vagy a macska leveri a vázát. Vagy a haverod elkezd üvölteni.</p>
     <div class="dl">
-      <a class="btn gold" href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases/latest/download/HushMoney-Mac.dmg">LETÖLTÉS MACRE<small>Apple Silicon (M1 vagy újabb)</small></a>
-      <a class="btn" href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases/latest/download/HushMoney-Windows-setup.exe">LETÖLTÉS WINDOWSRA<small>Windows 10 / 11</small></a>
+      <a class="btn gold" href="downloads/HushMoney-Mac.dmg" download>LETÖLTÉS MACRE<small>Apple Silicon (M1 vagy újabb)</small></a>
+      <a class="btn" href="downloads/HushMoney-Windows-setup.exe" download>LETÖLTÉS WINDOWSRA<small>Windows 10 / 11</small></a>
       <a class="btn" href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">JÁTÉK BÖNGÉSZŐBEN<small>Nincs mit telepíteni</small></a>
     </div>
     <p class="ver" id="ver">LEGÚJABB VERZIÓ: <b>…</b></p>
@@ -214,8 +214,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     <h2>Készen állsz a <em>melóra?</em></h2>
     <p class="sub" style="margin-left:auto;margin-right:auto">Szólj a haveroknak, hozd a kisbuszt, és ne ébreszd fel a kutyát.</p>
     <div class="dl">
-      <a class="btn gold" href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases/latest/download/HushMoney-Mac.dmg">LETÖLTÉS MACRE<small>Apple Silicon (M1 vagy újabb)</small></a>
-      <a class="btn" href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases/latest/download/HushMoney-Windows-setup.exe">LETÖLTÉS WINDOWSRA<small>Windows 10 / 11</small></a>
+      <a class="btn gold" href="downloads/HushMoney-Mac.dmg" download>LETÖLTÉS MACRE<small>Apple Silicon (M1 vagy újabb)</small></a>
+      <a class="btn" href="downloads/HushMoney-Windows-setup.exe" download>LETÖLTÉS WINDOWSRA<small>Windows 10 / 11</small></a>
       <a class="btn" href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">JÁTÉK BÖNGÉSZŐBEN<small>Nincs mit telepíteni</small></a>
     </div>
     <p class="ver"><a href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases">Összes verzió és újdonságok →</a></p>
@@ -230,10 +230,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 </footer>
 
 <script>
-// show the latest version from the GitHub release
-fetch('https://api.github.com/repos/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases/latest')
+// show the current version
+fetch('downloads/version.json', { cache: 'no-store' })
   .then(r => r.ok ? r.json() : null)
-  .then(j => { if (j && j.tag_name) document.querySelector('#ver b').textContent = j.tag_name.replace(/^v/, 'v') + ' · ' + new Date(j.published_at).toLocaleDateString('hu-HU'); else document.querySelector('#ver').style.display = 'none'; })
+  .then(j => { if (j && j.version) document.querySelector('#ver b').textContent = 'v' + j.version + ' · ' + new Date(j.date).toLocaleDateString('hu-HU'); else document.querySelector('#ver').style.display = 'none'; })
   .catch(() => { document.querySelector('#ver').style.display = 'none'; });
 </script>
 </body>
