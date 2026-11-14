@@ -1,18 +1,13 @@
 <!doctype html>
-<html lang="hu">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hush Money · Kooperatív betörős játék</title>
-<meta name="description" content="Hush Money: kooperatív betörős játék 1–4 főnek. Osonj be, pakold ki, tűnj el. Letöltés Macre és Windowsra, vagy játssz a böngészőben.">
+<title>Hush Money · A co-op heist game</title>
+<meta name="description" content="Hush Money: a co-op heist game for 1–4 players. Break in, clean out, get out. Download for Mac and Windows, or play in your browser.">
 <meta property="og:title" content="Hush Money">
-<meta property="og:description" content="Kooperatív betörős játék 1–4 főnek. Osonj be, pakold ki, tűnj el.">
+<meta property="og:description" content="A co-op heist game for 1–4 players. Break in, clean out, get out.">
 <meta property="og:image" content="img/hero.jpg">
-<link rel="alternate" hreflang="en" href="en/">
-<link rel="alternate" hreflang="hu" href="./">
-<script>
-try { const l = localStorage.getItem('hm.lang'); if (l === 'en' || (!l && !/^hu/i.test(navigator.language || ''))) location.replace('en/' + location.hash); } catch (e) {}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;600;800&display=swap&subset=latin-ext" rel="stylesheet">
@@ -81,7 +76,6 @@ footer{position:relative;z-index:1;padding:40px 0 60px;color:var(--muted);font-s
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 .cta{text-align:center}.cta .dl{justify-content:center}
 
-.lang{display:flex;gap:2px;margin-left:22px}.lang a{font-family:var(--px);font-size:12px;padding:4px 8px;border:2px solid var(--line);color:var(--muted);text-decoration:none}.lang a.on{border-color:var(--gold);color:var(--gold)}
 nav .right{display:flex;align-items:center}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 </style>
@@ -91,15 +85,14 @@ nav .right{display:flex;align-items:center}
 
 <nav>
   <div class="wrap">
-    <a class="logo" href="#">HUSH <b>MONEY</b></a>
+    <a class="logo" href="./">HUSH <b>MONEY</b></a>
     <div class="right">
     <ul>
-      <li><a href="#rolunk">A JÁTÉK</a></li>
-      <li><a href="#kepek">KÉPEK</a></li>
-      <li><a href="#telepites">TELEPÍTÉS</a></li>
-      <li><a href="#letoltes">LETÖLTÉS</a></li>
+      <li><a href="#about">THE GAME</a></li>
+      <li><a href="#screens">SCREENSHOTS</a></li>
+      <li><a href="#install">INSTALL</a></li>
+      <li><a href="#download">DOWNLOAD</a></li>
     </ul>
-    <div class="lang"><a class="on" href="./" hreflang="hu" aria-current="true" data-lang="hu">HU</a><a href="en/" hreflang="en" data-lang="en">EN</a></div>
     </div>
   </div>
 </nav>
@@ -107,147 +100,145 @@ nav .right{display:flex;align-items:center}
 <header class="hero">
   <div class="wrap">
     <h1>HUSH<span>MONEY</span></h1>
-    <p class="tag">OSONJ BE · PAKOLD KI · TŰNJ EL</p>
-    <p class="lead">Kooperatív betörős játék 1–4 főnek. Lopd ki a házat, mielőtt a tulaj felébred. Vagy a macska leveri a vázát. Vagy a haverod elkezd üvölteni.</p>
+    <p class="tag">BREAK IN · CLEAN OUT · GET OUT</p>
+    <p class="lead">A co-op heist game for 1–4 players. Clean out the house before the owner wakes up. Or the cat knocks over the vase. Or your buddy starts screaming.</p>
     <div class="dl">
-      <a class="btn gold" href="downloads/HushMoney-Mac.dmg" download>LETÖLTÉS MACRE<small>Apple Silicon (M1 vagy újabb)</small></a>
-      <a class="btn" href="downloads/HushMoney-Windows-setup.exe" download>LETÖLTÉS WINDOWSRA<small>Windows 10 / 11</small></a>
-      <a class="btn" href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">JÁTÉK BÖNGÉSZŐBEN<small>Nincs mit telepíteni</small></a>
+      <a class="btn gold" href="downloads/HushMoney-Mac.dmg" download>DOWNLOAD FOR MAC<small>Apple Silicon (M1 or newer)</small></a>
+      <a class="btn" href="downloads/HushMoney-Windows-setup.exe" download>DOWNLOAD FOR WINDOWS<small>Windows 10 / 11</small></a>
+      <a class="btn" href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">PLAY IN BROWSER<small>Nothing to install</small></a>
     </div>
-    <p class="ver" id="ver">LEGÚJABB VERZIÓ: <b>…</b></p>
+    <p class="ver" id="ver">LATEST VERSION: <b>…</b></p>
   </div>
 </header>
 
-<section id="rolunk">
+<section id="about">
   <div class="wrap">
-    <h2>Miről <em>szól?</em></h2>
-    <p class="sub">Minden éjjel a főnök kijelöl egy házat. Bejutsz, összeszeded a cuccot, és kijutsz a kisbuszig, mielőtt bárki észrevenne. Minden zaj számít.</p>
+    <h2>What's it <em>about?</em></h2>
+    <p class="sub">Every night the boss picks a house. You get in, grab the goods, and make it back to the van before anyone notices. Every sound counts.</p>
     <div class="feats">
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M15 15c3 0 6 1 6 5"/></svg>
-        <h3>Barátokkal online</h3>
-        <p>Hozz létre egy szobát, küldd el a 4 betűs kódot, és már mehettek is. Közelségi hangcsevegés: csak azt hallod, aki melletted áll. A tulaj is hallja.</p>
+        <h3>Online with friends</h3>
+        <p>Host a room, send the 4-letter code, and you're in. Proximity voice chat: you only hear whoever is standing next to you. So does the homeowner.</p>
       </div>
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3z"/><path d="M10 20v-6h4v6"/></svg>
-        <h3>Minden ház más</h3>
-        <p>Családi házak, farmok, penthouse-ok, kísértetjárta kúriák, és minden ötödik éjjel egy nagy fogás: ékszerbolt, pláza, múzeum vagy kaszinó.</p>
+        <h3>Every house is different</h3>
+        <p>Family homes, farmhouses, penthouses, haunted mansions, and every fifth night a big haul: a jewelry store, a mall, a museum or a casino.</p>
       </div>
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg>
-        <h3>Káosz, ahogy kell</h3>
-        <p>Dobd át a haverod a szobán, simogasd meg a kutyát (30% eséllyel), és vigyázz a macskára. Ha kiütnek, szellemként lebegsz tovább, és BÚ-val zavarod el a tulajt.</p>
+        <h3>Proper chaos</h3>
+        <p>Throw your buddy across the room, pet the dog (30% chance it works), and watch out for the cat. Get knocked out and you float around as a ghost, BOO-ing the owner away.</p>
       </div>
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="9" width="16" height="11"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/><circle cx="12" cy="14.5" r="1.5"/></svg>
-        <h3>Zárak, széfek, kamerák</h3>
-        <p>Feszítsd fel a zárat jó időzítéssel, keresd meg a széf kódját, kapcsold le a biztosítékot, és hurkold a kamerákat. A szőnyeg halk, a csempe hangos.</p>
+        <h3>Locks, safes, cameras</h3>
+        <p>Pick locks with good timing, find the safe code, kill the power at the fuse box and loop the cameras. Carpet is quiet, tile is loud.</p>
       </div>
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3l3 18 3-18"/></svg>
-        <h3>Ládák és ritka cuccok</h3>
-        <p>Nyiss ládákat CS2-stílusban, és gyűjts több mint 100 kozmetikumot. A legritkább sapkák TF2-szerű különleges effekttel jönnek: lángok, pénzeső, szellemek.</p>
+        <h3>Cases and rare loot</h3>
+        <p>Open CS2-style cases and collect over 100 cosmetics. The rarest hats come with TF2-style unusual effects: flames, money rain, ghosts.</p>
       </div>
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
-        <h3>Fejlődés és fiók</h3>
-        <p>Hírnév, új szerepek (zárfeltörő, sofőr, szélhámos), kihívások és trófeák. Lépj be egy fiókkal, és a mentésed Mac, Windows és telefon között is veled jön.</p>
+        <h3>Progression and accounts</h3>
+        <p>Reputation, new roles (safecracker, driver, con artist), challenges and trophies. Log in and your save follows you between Mac, Windows and phone.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="kepek">
+<section id="screens">
   <div class="wrap">
-    <h2>Így <em>néz ki</em></h2>
-    <p class="sub">Valódi képek a játékból, sötét házakkal és zseblámpákkal.</p>
+    <h2>What it <em>looks like</em></h2>
+    <p class="sub">Real screenshots from the game: dark houses and flashlights.</p>
     <div class="shots">
-      <figure class="shot"><img src="img/heist.jpg" alt="Betörés közben: a csapat zseblámpákkal egy sötét házban, egy narancssárga macskával" loading="lazy" width="1280" height="720"><figcaption>BETÖRÉS KÖZBEN · VIGYÁZZ A MACSKÁRA</figcaption></figure>
-      <figure class="shot"><img src="img/jobs.jpg" alt="A munkák tábla: három ház közül lehet választani, különböző kockázattal" loading="lazy" width="1280" height="720"><figcaption>VÁLASZD KI AZ ÉJSZAKA HÁZÁT</figcaption></figure>
-      <figure class="shot"><img src="img/hideout.jpg" alt="A búvóhely Sal-lal, a pultnál, a boltpolcokkal és a trófeákkal" loading="lazy" width="1280" height="720"><figcaption>A BÚVÓHELY · VÁSÁROLJ SAL-TÓL</figcaption></figure>
-      <figure class="shot"><img src="img/menu.jpg" alt="A főmenü az esős éjszakai házzal és a csapattal" loading="lazy" width="1280" height="720"><figcaption>A FŐMENÜ</figcaption></figure>
+      <figure class="shot"><img src="img/heist.jpg" alt="Mid-heist: the crew with flashlights in a dark house, with an orange cat" loading="lazy" width="1280" height="720"><figcaption>MID-HEIST · MIND THE CAT</figcaption></figure>
+      <figure class="shot"><img src="img/jobs.jpg" alt="The job board: pick one of three houses with different risks" loading="lazy" width="1280" height="720"><figcaption>PICK TONIGHT'S HOUSE</figcaption></figure>
+      <figure class="shot"><img src="img/hideout.jpg" alt="The hideout with Sal at the counter, shop shelves and trophies" loading="lazy" width="1280" height="720"><figcaption>THE HIDEOUT · SHOP AT SAL'S</figcaption></figure>
+      <figure class="shot"><img src="img/menu.jpg" alt="The main menu with the rainy night house and the crew" loading="lazy" width="1280" height="720"><figcaption>THE MAIN MENU</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section id="telepites">
+<section id="install">
   <div class="wrap">
-    <h2><em>Telepítés</em></h2>
-    <p class="sub">A játék még nincs aláírva az Apple-nél és a Microsoftnál, ezért az első indításnál a rendszer rákérdez. Ez csak egyszer történik meg.</p>
+    <h2><em>Installing</em></h2>
+    <p class="sub">The game isn't signed with Apple or Microsoft yet, so your computer asks the first time you open it. You only have to do this once.</p>
     <div class="steps">
       <div class="step">
-        <h3>Mac (M1 vagy újabb)</h3>
+        <h3>Mac (M1 or newer)</h3>
         <ol>
-          <li>Töltsd le a <b>.dmg</b> fájlt, és nyisd meg.</li>
-          <li>Húzd a <b>Hush Money</b> ikont az <b>Alkalmazások</b> mappába.</li>
-          <li>Indítsd el. Ha a macOS letiltja, nyisd meg: <b>Rendszerbeállítások → Adatvédelem és biztonság</b>.</li>
-          <li>Görgess le, és kattints a <b>Megnyitás mindenképp</b> gombra.</li>
+          <li>Download the <b>.dmg</b> file and open it.</li>
+          <li>Drag <b>Hush Money</b> into your <b>Applications</b> folder.</li>
+          <li>Open it. If macOS blocks it, go to <b>System Settings → Privacy &amp; Security</b>.</li>
+          <li>Scroll down and click <b>Open Anyway</b>.</li>
         </ol>
       </div>
       <div class="step">
         <h3>Windows 10 / 11</h3>
         <ol>
-          <li>Töltsd le a <b>setup.exe</b> fájlt, és indítsd el.</li>
-          <li>Ha megjelenik a <b>„A Windows megvédte a számítógépet”</b> ablak, kattints a <b>További információ</b> linkre.</li>
-          <li>Kattints a <b>Futtatás mindenképp</b> gombra.</li>
-          <li>Kövesd a telepítőt, és már indíthatod is a Start menüből.</li>
+          <li>Download the <b>setup.exe</b> file and run it.</li>
+          <li>If you see <b>"Windows protected your PC"</b>, click <b>More info</b>.</li>
+          <li>Click <b>Run anyway</b>.</li>
+          <li>Follow the installer, then launch it from the Start menu.</li>
         </ol>
       </div>
       <div class="step">
-        <h3>Böngésző</h3>
+        <h3>Browser</h3>
         <ol>
-          <li>Nyisd meg a <a href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">játékot a böngészőben</a>.</li>
-          <li>Ha egy ideje senki nem játszott, az első betöltés akár egy percig is eltarthat, mert a szerver felébred.</li>
-          <li>Irányítás: <kbd>WASD</kbd> mozgás, <kbd>E</kbd> megfogás, <kbd>bal klikk</kbd> lökés, <kbd>Shift</kbd> futás.</li>
+          <li>Open the <a href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">game in your browser</a>.</li>
+          <li>If nobody has played in a while, the first load can take up to a minute while the server wakes up.</li>
+          <li>Controls: <kbd>WASD</kbd> move, <kbd>E</kbd> grab, <kbd>left click</kbd> shove, <kbd>Shift</kbd> sprint.</li>
         </ol>
       </div>
     </div>
-    <p class="note">Hangcsevegéshez engedélyezd a mikrofont, amikor a játék rákérdez. A mikrofonod csak a játékban, a csapatoddal használja, és amit mondasz, azt a házban a tulaj is „hallja”.</p>
+    <p class="note">For voice chat, allow the microphone when the game asks. It's only used in-game with your crew, and whatever you say, the homeowner can "hear" too.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Gép<em>igény</em></h2>
-    <p class="sub">Pixel art, szóval szinte bármin elfut.</p>
+    <h2>System <em>requirements</em></h2>
+    <p class="sub">It's pixel art, so it runs on pretty much anything.</p>
     <div class="specs">
-      <div class="spec"><b>MAC</b><span>Apple Silicon (M1+), macOS 11 vagy újabb</span></div>
-      <div class="spec"><b>WINDOWS</b><span>Windows 10 vagy 11, 64 bit</span></div>
-      <div class="spec"><b>JÁTÉKOSOK</b><span>1–4 fő, online vagy egy gépen</span></div>
-      <div class="spec"><b>IRÁNYÍTÁS</b><span>Billentyűzet + egér, kontroller vagy érintés</span></div>
-      <div class="spec"><b>NYELV</b><span>A játék egyelőre angol nyelvű</span></div>
+      <div class="spec"><b>MAC</b><span>Apple Silicon (M1+), macOS 11 or newer</span></div>
+      <div class="spec"><b>WINDOWS</b><span>Windows 10 or 11, 64-bit</span></div>
+      <div class="spec"><b>PLAYERS</b><span>1–4, online or on one computer</span></div>
+      <div class="spec"><b>CONTROLS</b><span>Keyboard and mouse, controller or touch</span></div>
+      <div class="spec"><b>LANGUAGE</b><span>English</span></div>
     </div>
   </div>
 </section>
 
-<section id="letoltes" class="cta">
+<section id="download" class="cta">
   <div class="wrap">
-    <h2>Készen állsz a <em>melóra?</em></h2>
-    <p class="sub" style="margin-left:auto;margin-right:auto">Szólj a haveroknak, hozd a kisbuszt, és ne ébreszd fel a kutyát.</p>
+    <h2>Ready for the <em>job?</em></h2>
+    <p class="sub" style="margin-left:auto;margin-right:auto">Call your friends, bring the van, and don't wake the dog.</p>
     <div class="dl">
-      <a class="btn gold" href="downloads/HushMoney-Mac.dmg" download>LETÖLTÉS MACRE<small>Apple Silicon (M1 vagy újabb)</small></a>
-      <a class="btn" href="downloads/HushMoney-Windows-setup.exe" download>LETÖLTÉS WINDOWSRA<small>Windows 10 / 11</small></a>
-      <a class="btn" href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">JÁTÉK BÖNGÉSZŐBEN<small>Nincs mit telepíteni</small></a>
+      <a class="btn gold" href="downloads/HushMoney-Mac.dmg" download>DOWNLOAD FOR MAC<small>Apple Silicon (M1 or newer)</small></a>
+      <a class="btn" href="downloads/HushMoney-Windows-setup.exe" download>DOWNLOAD FOR WINDOWS<small>Windows 10 / 11</small></a>
+      <a class="btn" href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">PLAY IN BROWSER<small>Nothing to install</small></a>
     </div>
-    <p class="ver"><a href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases">Összes verzió és újdonságok →</a></p>
+    <p class="ver"><a href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases">All versions and changes →</a></p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>Hush Money · független hobbiprojekt</span>
-    <span>Egy játék, nem útmutató. Ne törj be senkihez.</span>
+    <span>Hush Money · an indie hobby project</span>
+    <span>It's a game, not a guide. Don't actually rob anyone.</span>
   </div>
 </footer>
 
 <script>
 
-// remember the chosen language; first-time visitors without Hungarian browsers go to English
-document.querySelectorAll('.lang a').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('hm.lang', a.dataset.lang); } catch (e) {} }));
 // show the current version
 fetch('downloads/version.json', { cache: 'no-store' })
   .then(r => r.ok ? r.json() : null)
-  .then(j => { if (j && j.version) document.querySelector('#ver b').textContent = 'v' + j.version + ' · ' + new Date(j.date).toLocaleDateString('hu-HU'); else document.querySelector('#ver').style.display = 'none'; })
+  .then(j => { if (j && j.version) document.querySelector('#ver b').textContent = 'v' + j.version + ' · ' + new Date(j.date).toLocaleDateString('en-GB'); else document.querySelector('#ver').style.display = 'none'; })
   .catch(() => { document.querySelector('#ver').style.display = 'none'; });
 </script>
 </body>

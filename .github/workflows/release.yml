@@ -20,7 +20,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           V=$(jq -r .version downloads/version.json)
-          NOTES="Mac (M1 vagy újabb): HushMoney-Mac.dmg · Windows 10/11: HushMoney-Windows-setup.exe. Telepítési útmutató: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/#telepites"
+          NOTES="Mac (M1 or newer): HushMoney-Mac.dmg · Windows 10/11: HushMoney-Windows-setup.exe. Install guide: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/#install"
           if gh release view "v$V" >/dev/null 2>&1; then
             gh release upload "v$V" downloads/HushMoney-Mac.dmg downloads/HushMoney-Windows-setup.exe --clobber
           else
