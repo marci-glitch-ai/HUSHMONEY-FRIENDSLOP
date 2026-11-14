@@ -1,0 +1,21 @@
+name: Check website
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Try the site addresses
+        run: |
+          for u in \
+            "https://marci-glitch-ai.github.io/HUSHMONEY-FRIENDSLOP/" \
+            "https://marci-glitch-ai.github.io/HUSHMONEY-FRIENDSLOP/index.html" \
+            "https://marci-glitch-ai.github.io/hushmoney-friendslop/" \
+            "https://marci-glitch-ai.github.io/HUSHMONEY-FRIENDSLOP" \
+            "https://marci-glitch-ai.github.io/HUSHMONEY-FRIENDSLOP/downloads/version.json" \
+            "https://marci-glitch-ai.github.io/HUSHMONEY-FRIENDSLOP/img/hero.jpg"; do
+            code=$(curl -s -o /tmp/body -w "%{http_code} -> %{url_effective}" -L "$u")
+            echo "RESULT $u :: $code :: $(head -c 120 /tmp/body | tr '\n' ' ')"
+          done
