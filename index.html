@@ -8,6 +8,11 @@
 <meta property="og:title" content="Hush Money">
 <meta property="og:description" content="Kooperatív betörős játék 1–4 főnek. Osonj be, pakold ki, tűnj el.">
 <meta property="og:image" content="img/hero.jpg">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="alternate" hreflang="hu" href="./">
+<script>
+try { const l = localStorage.getItem('hm.lang'); if (l === 'en' || (!l && !/^hu/i.test(navigator.language || ''))) location.replace('en/' + location.hash); } catch (e) {}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;600;800&display=swap&subset=latin-ext" rel="stylesheet">
@@ -75,6 +80,9 @@ kbd{font-family:var(--px);font-size:11px;background:#0c0914;border:2px solid var
 footer{position:relative;z-index:1;padding:40px 0 60px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 .cta{text-align:center}.cta .dl{justify-content:center}
+
+.lang{display:flex;gap:2px;margin-left:22px}.lang a{font-family:var(--px);font-size:12px;padding:4px 8px;border:2px solid var(--line);color:var(--muted);text-decoration:none}.lang a.on{border-color:var(--gold);color:var(--gold)}
+nav .right{display:flex;align-items:center}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 </style>
 </head>
@@ -84,12 +92,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 <nav>
   <div class="wrap">
     <a class="logo" href="#">HUSH <b>MONEY</b></a>
+    <div class="right">
     <ul>
       <li><a href="#rolunk">A JÁTÉK</a></li>
       <li><a href="#kepek">KÉPEK</a></li>
       <li><a href="#telepites">TELEPÍTÉS</a></li>
       <li><a href="#letoltes">LETÖLTÉS</a></li>
     </ul>
+    <div class="lang"><a class="on" href="./" hreflang="hu" aria-current="true" data-lang="hu">HU</a><a href="en/" hreflang="en" data-lang="en">EN</a></div>
+    </div>
   </div>
 </nav>
 
@@ -230,6 +241,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 </footer>
 
 <script>
+
+// remember the chosen language; first-time visitors without Hungarian browsers go to English
+document.querySelectorAll('.lang a').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('hm.lang', a.dataset.lang); } catch (e) {} }));
 // show the current version
 fetch('downloads/version.json', { cache: 'no-store' })
   .then(r => r.ok ? r.json() : null)

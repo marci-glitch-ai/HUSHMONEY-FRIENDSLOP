@@ -1,22 +1,23 @@
 # Hush Money
 
-Kooperatív betörős játék 1–4 főnek. Osonj be, pakold ki, tűnj el.
+**HU:** Kooperatív betörős játék 1–4 főnek. Osonj be, pakold ki, tűnj el.
+**EN:** A co-op heist game for 1–4 players. Break in, clean out, get out.
 
-**Weboldal és letöltés:** https://marci-glitch-ai.github.io/HUSHMONEY-FRIENDSLOP/
+**Weboldal / Website:** https://marci-glitch-ai.github.io/HUSHMONEY-FRIENDSLOP/ (English: `/en/`)
 
-## Letöltés
+## Letöltés / Download
 
-A legújabb verziót a jobb oldali **Releases** résznél találod:
+See **Releases** on the right, or use the website:
 
-- **Mac (M1 vagy újabb):** `HushMoney-Mac.dmg`
+- **Mac (M1+):** `HushMoney-Mac.dmg`
 - **Windows 10 / 11:** `HushMoney-Windows-setup.exe`
-- **Böngészőben:** https://hushmoney-server.onrender.com
+- **Böngészőben / In your browser:** https://hushmoney-server.onrender.com
 
-## Első indítás
+## Első indítás / First launch
 
-A játék még nincs aláírva, ezért az első indításnál a rendszer rákérdez:
+The game isn't signed yet, so the first launch needs one extra click:
 
-- **Mac:** Rendszerbeállítások → Adatvédelem és biztonság → **Megnyitás mindenképp**
-- **Windows:** „A Windows megvédte a számítógépet” → **További információ** → **Futtatás mindenképp**
+- **Mac:** System Settings → Privacy & Security → **Open Anyway** (Rendszerbeállítások → Adatvédelem és biztonság → **Megnyitás mindenképp**)
+- **Windows:** "Windows protected your PC" → **More info** → **Run anyway** („A Windows megvédte a számítógépet” → **További információ** → **Futtatás mindenképp**)
 
-Ez a tároló csak a letöltéseket és a weboldalt tartalmazza.
+This repo only holds the downloads and the website.
