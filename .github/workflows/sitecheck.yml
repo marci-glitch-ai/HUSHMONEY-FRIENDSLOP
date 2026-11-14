@@ -19,3 +19,5 @@ jobs:
             code=$(curl -s -o /tmp/body -w "%{http_code} -> %{url_effective}" -L "$u")
             echo "RESULT $u :: $code :: $(head -c 120 /tmp/body | tr '\n' ' ')"
           done
+          echo "RENDER status :: $(curl -s -m 60 https://hushmoney-server.onrender.com/status | head -c 200)"
+          echo "RENDER game version :: $(curl -s -m 60 https://hushmoney-server.onrender.com/ | grep -o 'v0\.[0-9]*' | sort -u | tr '\n' ' ')"
