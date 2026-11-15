@@ -239,7 +239,7 @@ nav .right{display:flex;align-items:center}
 // show the current version
 fetch('downloads/version.json', { cache: 'no-store' })
   .then(r => r.ok ? r.json() : null)
-  .then(j => { if (j && j.version) document.querySelector('#ver b').textContent = 'v' + j.version + ' · ' + new Date(j.date).toLocaleDateString('en-GB'); else document.querySelector('#ver').style.display = 'none'; })
+  .then(j => { if (j && j.version) document.querySelector('#ver b').textContent = 'v' + j.version + (j.name ? ' · ' + j.name : '') + ' · ' + new Date(j.date).toLocaleDateString('en-GB'); else document.querySelector('#ver').style.display = 'none'; })
   .catch(() => { document.querySelector('#ver').style.display = 'none'; });
 </script>
 </body>

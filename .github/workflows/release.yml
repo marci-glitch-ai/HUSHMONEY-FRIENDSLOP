@@ -20,9 +20,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           V=$(jq -r .version downloads/version.json)
-          NOTES="Mac (M1 or newer): HushMoney-Mac.dmg · Windows 10/11: HushMoney-Windows-setup.exe. Install guide: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/#install"
+          NAME=$(jq -r '.name // empty' downloads/version.json)
+          TITLE="Hush Money v$V${NAME:+ · $NAME}"
+          CHANGES=$(jq -r '(.changes // []) | map("- " + .) | join("\n")' downloads/version.json)
+          NOTES="$(printf '%s\n\n%s' "${CHANGES}" "Mac (M1 or newer): HushMoney-Mac.dmg · Windows 10/11: HushMoney-Windows-setup.exe. Install guide: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/#install")"
           if gh release view "v$V" >/dev/null 2>&1; then
             gh release upload "v$V" downloads/HushMoney-Mac.dmg downloads/HushMoney-Windows-setup.exe --clobber
+            gh release edit "v$V" --title "$TITLE" --notes "$NOTES"
           else
-            gh release create "v$V" downloads/HushMoney-Mac.dmg downloads/HushMoney-Windows-setup.exe --title "Hush Money v$V" --notes "$NOTES" --latest
+            gh release create "v$V" downloads/HushMoney-Mac.dmg downloads/HushMoney-Windows-setup.exe --title "$TITLE" --notes "$NOTES" --latest
           fi
