@@ -78,6 +78,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 
 nav .right{display:flex;align-items:center}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* patch notes */
+.pn{display:grid;gap:16px}
+.pnv{background:var(--panel);border:3px solid var(--line);padding:22px 24px}
+.pnv:first-child{border-color:var(--gold)}
+.pnv h3{font-family:var(--px);font-size:16px;margin:0 0 4px;color:#fff;font-weight:400}.pnv h3 b{color:var(--gold);font-weight:400}
+.pnv .d{font-family:var(--px);font-size:11px;color:var(--muted);margin:0 0 12px}
+.pnv ul{margin:0;padding-left:20px;color:#cfc7e6}.pnv li{margin:6px 0}
+.pnv details summary{cursor:pointer;font-family:var(--px);font-size:11px;color:var(--gold);margin-top:6px}
 </style>
 </head>
 <body>
@@ -91,6 +99,7 @@ nav .right{display:flex;align-items:center}
       <li><a href="#about">THE GAME</a></li>
       <li><a href="#screens">SCREENSHOTS</a></li>
       <li><a href="#install">INSTALL</a></li>
+      <li><a href="#patch">PATCH NOTES</a></li>
       <li><a href="#download">DOWNLOAD</a></li>
     </ul>
     </div>
@@ -124,7 +133,7 @@ nav .right{display:flex;align-items:center}
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3z"/><path d="M10 20v-6h4v6"/></svg>
         <h3>Every house is different</h3>
-        <p>Family homes, farmhouses, penthouses, haunted mansions, and every fifth night a big haul: a jewelry store, a mall, a museum or a casino.</p>
+        <p>Bungalows, ranches, townhouses, farmhouses, villas with pools and penthouses, each with their own household. Get in through the front door, the back door, the garage or a window. Every fifth night: a big haul.</p>
       </div>
       <div class="feat">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg>
@@ -153,12 +162,14 @@ nav .right{display:flex;align-items:center}
 <section id="screens">
   <div class="wrap">
     <h2>What it <em>looks like</em></h2>
-    <p class="sub">Real screenshots from the game: dark houses and flashlights.</p>
+    <p class="sub">Real screenshots from the game: dark houses, flashlights and one very nosy neighbour.</p>
     <div class="shots">
+      <figure class="shot"><img src="img/house.jpg" alt="A farmhouse seen from above while casing it: front yard, gravel paths, the street and the van" loading="lazy" width="1280" height="720"><figcaption>NEW · CASE THE HOUSE, PICK YOUR WAY IN</figcaption></figure>
+      <figure class="shot"><img src="img/neighbour.jpg" alt="Sneaking down a gravel side path while the nosy neighbour watches from his lit window" loading="lazy" width="1280" height="720"><figcaption>NEW · THE NOSY NEIGHBOUR IS WATCHING</figcaption></figure>
       <figure class="shot"><img src="img/heist.jpg" alt="Mid-heist: the crew with flashlights in a dark house, with an orange cat" loading="lazy" width="1280" height="720"><figcaption>MID-HEIST · MIND THE CAT</figcaption></figure>
+      <figure class="shot"><img src="img/chase.jpg" alt="The getaway: the van speeds down a night street with the cops in the mirror" loading="lazy" width="1280" height="720"><figcaption>NEW · THE 3D GETAWAY</figcaption></figure>
+      <figure class="shot"><img src="img/shop.jpg" alt="Sal's shop: Sal behind the counter, deals of the night, bundles and scratch cards" loading="lazy" width="1280" height="720"><figcaption>NEW · HAGGLE WITH SAL</figcaption></figure>
       <figure class="shot"><img src="img/jobs.jpg" alt="The job board: pick one of three houses with different risks" loading="lazy" width="1280" height="720"><figcaption>PICK TONIGHT'S HOUSE</figcaption></figure>
-      <figure class="shot"><img src="img/hideout.jpg" alt="Sal's shop in the hideout: glass cases, price tags and a deal of the night" loading="lazy" width="1280" height="720"><figcaption>THE HIDEOUT · SHOP AT SAL'S</figcaption></figure>
-      <figure class="shot"><img src="img/menu.jpg" alt="The neon main menu" loading="lazy" width="1280" height="720"><figcaption>THE MAIN MENU</figcaption></figure>
     </div>
   </div>
 </section>
@@ -214,6 +225,14 @@ nav .right{display:flex;align-items:center}
   </div>
 </section>
 
+<section id="patch">
+  <div class="wrap">
+    <h2>Patch <em>notes</em></h2>
+    <p class="sub">Everything that changed, newest first. Written by people who should probably be sleeping.</p>
+    <div id="pn" class="pn"><p class="note">Loading the notes…</p></div>
+  </div>
+</section>
+
 <section id="download" class="cta">
   <div class="wrap">
     <h2>Ready for the <em>job?</em></h2>
@@ -223,7 +242,7 @@ nav .right{display:flex;align-items:center}
       <a class="btn" href="downloads/HushMoney-Windows-setup.exe" download>DOWNLOAD FOR WINDOWS<small>Windows 10 / 11</small></a>
       <a class="btn" href="https://hushmoney-server.onrender.com" target="_blank" rel="noopener">PLAY IN BROWSER<small>Nothing to install</small></a>
     </div>
-    <p class="ver"><a href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases">All versions and changes →</a></p>
+    <p class="ver"><a href="#patch">Patch notes</a> · <a href="https://github.com/marci-glitch-ai/HUSHMONEY-FRIENDSLOP/releases">All releases →</a></p>
   </div>
 </section>
 
@@ -241,6 +260,21 @@ fetch('downloads/version.json', { cache: 'no-store' })
   .then(r => r.ok ? r.json() : null)
   .then(j => { if (j && j.version) document.querySelector('#ver b').textContent = 'v' + j.version + (j.name ? ' · ' + j.name : '') + ' · ' + new Date(j.date).toLocaleDateString('en-GB'); else document.querySelector('#ver').style.display = 'none'; })
   .catch(() => { document.querySelector('#ver').style.display = 'none'; });
+
+// patch notes, newest first
+const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+fetch('downloads/patchnotes.json', { cache: 'no-store' })
+  .then(r => r.ok ? r.json() : null)
+  .then(list => {
+    const el = document.getElementById('pn'); if (!list || !list.length) { el.innerHTML = '<p class="note">No notes yet.</p>'; return; }
+    el.innerHTML = list.map((v, i) => {
+      const items = v.changes.map(c => '<li>' + esc(c) + '</li>');
+      const head = '<h3>v' + esc(v.version) + (v.name ? ' · <b>' + esc(v.name) + '</b>' : '') + '</h3><p class="d">' + new Date(v.date).toLocaleDateString('en-GB') + (i === 0 ? ' · LATEST' : '') + '</p>';
+      const body = i === 0 && items.length > 10 ? '<ul>' + items.slice(0, 10).join('') + '</ul><details><summary>SHOW ALL ' + items.length + ' CHANGES</summary><ul>' + items.slice(10).join('') + '</ul></details>' : '<ul>' + items.join('') + '</ul>';
+      return '<article class="pnv">' + head + body + '</article>';
+    }).join('');
+  })
+  .catch(() => { document.getElementById('pn').innerHTML = '<p class="note">Couldn\'t load the notes. Try the releases page.</p>'; });
 </script>
 </body>
 </html>
