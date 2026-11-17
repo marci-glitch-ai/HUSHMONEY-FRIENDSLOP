@@ -1,5 +1,30 @@
 [
  {
+  "version": "0.24.0",
+  "date": "2026-11-17",
+  "name": "The Drip Update",
+  "changes": [
+   "Brand new crooks. Same crimes, better drip.",
+   "Every crook is now a paperdoll: hat, face, eyes, top, gloves, pants, shoes and back item are all separate. Wear a crown, a clown nose, a tux and bunny slippers at the same time. We won't stop you. Nobody can stop you.",
+   "Every cosmetic you already own got redrawn for the new body. Your unlocks are safe. Your dignity was never safe.",
+   "New slots: eyes, pants and shoes. Star eyes, angry eyes, sleepy eyes. Camo, plaid and gold pants. Flippers. Yes, flippers. For heists.",
+   "New outfits: the jersey and the sharp suit. Dress for the job you want (burglar).",
+   "The crooks are a bit taller now so you can actually see the drip. Names and titles moved up so they stop sitting on your face.",
+   "The hideout got rebuilt from scratch. It's four rooms now: Sal's shop, the crew lounge, the back room and the garage.",
+   "Stock in Sal's shop sits in glass cases and on shelves now, instead of floating in mid-air like a haunted yard sale.",
+   "Look at any case and Sal's screen opens right on that item. Sal pretends he didn't see you looking. He saw.",
+   "The crew lounge has a couch, a TV with the leaderboard, an arcade machine nobody's allowed to touch, your trophies, the mirror and the challenge board.",
+   "The van lives in the garage now. Walk up to it to go to work, like a professional criminal.",
+   "The roulette table moved to the back room, where gambling belongs.",
+   "Sal's cat sits on the counter now, instead of hovering next to it like a ghost.",
+   "No more reinstalling! The desktop app now downloads new versions of the game on its own when you open it. Updates just... happen. Like magic. Like crime.",
+   "When the app itself needs an update, it asks once, updates itself and restarts. Never drag anything to the Trash again.",
+   "Offline? It plays the last version it downloaded. Your heists work on a plane. Please don't rob the plane.",
+   "You need to install this version by hand one last time. After that, never again. Pinky promise. Crook's honour.",
+   "Fixed online players not being able to open Sal's shop in the new hideout. Sal is open to everyone. For a price."
+  ]
+ },
+ {
   "version": "0.23.0",
   "date": "2026-11-16",
   "name": "The Open House Update",
